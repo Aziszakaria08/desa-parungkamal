@@ -1,0 +1,341 @@
+/* Colors */
+:root {
+  --primary-color: #e6f7e6; /* Hijau Pastel */
+  --text-color: #4a4a4a; /* Abu-abu Gelap */
+  --title-color: #7d5a50; /* Coklat Tua */
+  --bg-color: #d9f2fa; /* Biru Langit */
+}
+
+/* Navbar Styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-color);
+  scroll-behavior: smooth; /* Smooth scroll for the entire document */
+  scroll-padding: 3rem;
+}
+header {
+  width: 100%;
+  position: fixed;
+  height: 60px;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9999;
+  background-color: #d9f2fa;
+}
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #7d5a50;
+}
+span {
+  color: #2d9e2d;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  display: block;
+  color: #4a4a4a;
+  font-size: 20px;
+  padding: 5px 20px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+  color: #2d9e2d;
+}
+
+/* Home Section */
+.home-section {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  background-image: url(../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home-image {
+  width: 100%;
+  object-fit: cover;
+  height: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.home-content h2 {
+  font-size: 2rem;
+  color: #f6fcdf;
+}
+
+.home-content p {
+  font-size: 1rem;
+  color: #f6fcdf;
+}
+
+/* Biography Section */
+.biography-section {
+  padding: 2rem;
+  background-color: #e8e8e8;
+}
+
+.biography-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.biography-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Explore wisata */
+.explore {
+  padding: 50px 20px;
+  text-align: center;
+}
+.explore h2 {
+  font-size: 2.5rem;
+  color: var(--main);
+  margin-bottom: 50px;
+}
+.explore-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.explore-card {
+  flex: 1 1 calc(33.33% - 20px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  height: 350px;
+  max-width: 350px;
+}
+.explore-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.explore-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--bg-color);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 20px;
+}
+.explore-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.explore-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.explore-card:hover img {
+  transform: scale(1.1);
+}
+.explore-card:hover .explore-info {
+  opacity: 1;
+}
+
+/* Map Section */
+#map {
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid var(--main);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+#map h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #333;
+  border-bottom: 1px solid;
+}
+#map-container {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+/* Contact Section */
+.contact {
+  margin-top: 75px;
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  text-align: center;
+}
+.contact h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact label {
+  display: block;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.contact button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.contact button:hover {
+  background-color: #45a049;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 20px;
+  text-align: center;
+}
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+.footer .footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+.footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* navbar */
+/* @media only screen and (max-width: 1329px) {
+  header {
+    padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  header {
+    padding: 0 30px;
+  }
+} */
+@media only screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: #11101b;
+    margin: 6px 0;
+  }
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #747383;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .nav-bar.active {
+    height: 450px;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .nav-bar.active ul {
+    opacity: 1;
+  }
+
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+  /* explore */
+  .explore h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .explore-card {
+    flex: 1 1 100%;
+    width: 100%;
+    height: 350px;
+    max-width: 350px;
+  }
+  .explore-card img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+}
